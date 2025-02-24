@@ -12,6 +12,7 @@ public class Main {
         n = 123;
         System.out.println(sumaDigitos(n) + "\n");
 
+        System.out.println(multi(arr, 0) + "\n");
         
     }
 
@@ -36,5 +37,12 @@ public class Main {
             return n;
         }
         return n % 10 + sumaDigitos(n / 10);
+    }
+
+    public static int multi(int[] arr, int pos) {
+        if (pos == arr.length) {
+            return 1;
+        }
+        return arr[pos] * multi(arr, pos + 1);
     }
 }
