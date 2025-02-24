@@ -7,7 +7,12 @@ public class Main {
         int n = 1;
         int d = 1;
 
-        System.out.println(div(n, d));
+        System.out.println(div(n, d) + "\n");
+
+        n = 123;
+        System.out.println(sumaDigitos(n) + "\n");
+
+        
     }
 
     public static int sum(int[] arr, int pos) {
@@ -24,5 +29,12 @@ public class Main {
             return 0;
         }
         return 1 + div(n - d, d);
+    }
+
+    public static int sumaDigitos(int n) {
+        if (n < 10) {
+            return n;
+        }
+        return n % 10 + sumaDigitos(n / 10);
     }
 }
